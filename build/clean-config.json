@@ -1,0 +1,15 @@
+{
+    "selectors": [
+        "./xmlns:packageVersions",
+        "./xmlns:classAccesses[xmlns:enabled='false']",
+        "./xmlns:pageAccesses[xmlns:enabled = 'false']",        
+        "./xmlns:recordTypeVisibilities[xmlns:visible = 'false']",
+        "./xmlns:userPermissions[xmlns:enabled = 'false']"
+    ],
+    "extensions": [
+        "-meta.xml",
+        ".profile",
+        ".permissionset"
+    ],
+    "namespace": "http://soap.sforce.com/2006/04/metadata"
+}

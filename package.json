@@ -1,0 +1,38 @@
+{
+  "name": "jenkins-ci",
+  "version": "1.0.0",
+  "description": "Demo CI/CD process",
+  "scripts": {
+    "package": "npm run package-xml && npm run clean-metadata",
+    "build": "npm run package && npm run deploy",
+    "deploy": "node build/deploy",
+    "destroy": "node build/destroy",
+    "retrieve": "node build/retrieveByName",
+    "package-xml": "./node_modules/.bin/package-xml -v \"45.0\"",
+    "clean-metadata": "./node_modules/.bin/package-xml -m -C build/clean-config.json"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "cs-jsforce": "^1.7.2",
+    "cs-jsforce-metadata-tools": "^1.2.10",
+    "package-xml": "^2.4.19",
+    "fs-extra": "^0.30.0",
+    "git-rev": "^0.2.1",
+    "git-rev-sync": "^1.8.0",
+    "papaparse": "^4.3.5",
+    "prettier": "1.19.1",
+    "prettier-plugin-apex": "1.2.0",
+    "sinon": "^1.17.5",
+    "sync-request": "^3.0.1",
+    "zip": "^1.2.0",
+    "sfdx": "^1.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorabraham/Jenkins-CI.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/victorabraham/Jenkins-CI/issues"
+  }
+}
