@@ -8,7 +8,7 @@ node {
         sh 'npm run package'
 
         stage 'deploy'
-        npm run deploy
+        sh 'npm run deploy'
 
         stage 'test'
         sh 'echo RUNTESTS'
