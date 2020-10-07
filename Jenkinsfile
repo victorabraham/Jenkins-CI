@@ -1,0 +1,3 @@
+node {
+    sh 'echo test'
+}
