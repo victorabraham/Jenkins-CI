@@ -10,4 +10,7 @@ node {
         stage 'test'
         sh 'echo RUNTESTS'
     }
+
+    stage 'archive'
+    archiveArtifacts artifacts: 'src/package.xml', followSymlinks: false
 }
