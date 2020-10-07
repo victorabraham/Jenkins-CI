@@ -2,7 +2,7 @@ node {
     stage 'checkout'
     git 'https://github.com/victorabraham/Jenkins-CI.git'
     
-    nodejs('V 6.13') {
+    nodejs('V 10.10') {
         stage 'package'
         sh 'npm install'
         sh 'npm run package'
@@ -16,4 +16,5 @@ node {
 
     stage 'archive'
     archiveArtifacts artifacts: 'src/package.xml', followSymlinks: false
+    cleanWs notFailBuild: true
 }
